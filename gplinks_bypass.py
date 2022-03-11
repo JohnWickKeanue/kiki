@@ -3,6 +3,7 @@ import requests
 import cloudscraper
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
+import argparse
 
 arguments = argparse.ArgumentParser()
 arguments.add_argument("-url", "--url", dest="url", help="urllink")
