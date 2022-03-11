@@ -4,8 +4,10 @@ import cloudscraper
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 
-
-url = "https://gplinks.co/XaSoGuOD" # eg: https://gplinks.co/XXXX
+arguments = argparse.ArgumentParser()
+arguments.add_argument("-url", "--url", dest="url", help="urllink")
+args = arguments.parse_args()
+url = args.url # eg: https://gplinks.co/XXXX
 
 # ==============================================
 
