@@ -3,13 +3,16 @@ import requests
 import cloudscraper
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
+import argparse
 
-
-url = "https://gplinks.co/XaSoGuOD" # eg: https://gplinks.co/XXXX
-
+arguments = argparse.ArgumentParser()
+arguments.add_argument("-url", "--url", dest="url", help="url link")
+args = arguments.parse_args()
 # ==============================================
 
+url = args.url
 def gplinks_bypass(url):
+    
     scraper = cloudscraper.create_scraper(allow_brotli=False)
     res = scraper.get(url)
     
